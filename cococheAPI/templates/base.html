@@ -1,0 +1,86 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8">
+
+  <title>Cocoche API</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+
+
+{% block headImport %}
+{% endblock %}
+
+</head>
+
+<body style="font-family:Montserrat">
+  <div class="container ">
+  <div class="row  text-center align-items-start pt-5 pb-3">
+      <div class="col-3 d-flex flex-column justify-content-center align-items-center mb-4 ">
+        <div style="background-color:#2EB4E3;height: 4rem;width: 4rem;" class="text-center d-flex flex-column justify-content-center align-items-center mb-2 rounded-circle">
+          <span style="color:white" class="far fa-hand-point-up fa-2x"></span>
+        </div>
+        <b class="py-2">ELEGI UN AUTO</b>
+        <p>Acorde a tus intereses.</p>
+      </div>
+
+      <div class="col-3 d-flex flex-column justify-content-center align-items-center mb-4 ">
+        <div style="background-color:#2EB4E3;height: 4rem;width: 4rem;" class="text-center d-flex flex-column justify-content-center align-items-center mb-2 rounded-circle">
+          <span style="color:white" class="far fa-id-card fa-2x"></span>
+        </div>
+        <b class="py-2">RETIRA EL AUTO</b>
+        <p >Combina un lugar de encuetro con el propietario.</p>
+      </div>
+
+      <div class="col-3 d-flex flex-column justify-content-center align-items-center mb-4 ">
+        <div style="background-color:#2EB4E3;height: 4rem;width: 4rem;" class="text-center d-flex flex-column justify-content-center align-items-center mb-2 rounded-circle">
+          <span style="color:white" class="fas fa-car fa-2x"></span>
+        </div>
+        <b class="py-2">VIAJA SEGURO</b>
+        <p>Cocoche cuenta con un seguro todo riesgo y retiene un deposito en la tarjeta como garantia.</p>
+      </div>
+
+      <div class="col-3 d-flex flex-column justify-content-center align-items-center mb-4 ">
+        <div style="background-color:#2EB4E3;height: 4rem;width: 4rem;" class="text-center d-flex flex-column justify-content-center align-items-center mb-2 rounded-circle">
+          <span style="color:white" class="far fa-credit-card fa-2x"></span>
+        </div>
+        <b class="py-2">REALIZA EL PAGO</b>
+        <p>Abonàs el costo del alquiler.</p>
+      </div>
+
+    </div>
+  </div>
+  <div class="container-fluid ">
+    <div style="background-color:#f4f4f4" class="row d-flex flex-column justify-content-center align-items-center">
+        <div class="row text-center py-5 ">
+          <div class="col">
+         <b class="py-3 px-3" style="color:#6b6e7f;border:solid; border-width: 2px;border-color:#898ba0;"> DESTACADOS </b>
+          </div>
+        </div>
+        
+          <div class="row d-flex flex-column justify-content-center align-items-center">
+            {% block content %}
+            {% endblock %}
+          </div>
+    </div> 
+  </div>
+</body>
+
+
+<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'js/all.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+<script src="{% static 'js/moment.min.js' %}"></script>
+
+
+{% block scripts %}
+
+{% endblock %}
+
+</html>

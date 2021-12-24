@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if fordList %}
+<div class="row row-cols-3 pb-3" >
+        {% for ford in fordList %}
+
+            <div class="col">
+              <div class="card">
+                <img src="{% static 'img/car.jpg' %}" class="card-img-top" alt="...">
+                
+                <b style="background-color:#6ebfe5;color:white" class='ps-2 py-1'><span  class="far fa-hdd"></span> {{ ford.doors }} puertas <span  class="fas fa-tint"></span>  {{ ford.fuelType }}</b>
+                
+                <div class="card-body">
+                    <p style="font-weight:bold" class="card-title fs-3">${{ ford.cost }} </p>
+                  <p class="card-text">
+                    <p style="color:#6ebfe5">{{ ford.brandDescription }}, {{ ford.modelDescription }}<p>
+                    <p style="color:#999999"> {{ ford.placeDescription }}</p>
+                </p>
+                </div>
+              </div>
+            </div>
+            
+        {% endfor %}
+</div>
+{% else %}
+    <div class="alert alert-danger" role="alert">
+    <p>Alert : Please note that no car were available.</p>
+    </div>
+{% endif %}
+
+
+{% endblock %}
